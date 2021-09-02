@@ -1,4 +1,25 @@
+#container{
+    display:flex;
+    justify-content: center;
+    background-color: #DCB4A8;
+}
+
+#input{
+    padding: 2%;
+}
+
 textarea{
-    width: 35%;
-    height: 100%;
+    background-color: #EDDAD4;
+    border-radius: 7px;
+    width: 35vw;
+    height: 90vh;
+}
+
+#output{
+    margin: 2%;
+    background-color: #EDDAD4;
+    border-radius: 7px;
+    border: 1px gray solid;
+    width: 35vw;
+    height: 90vh;
 }

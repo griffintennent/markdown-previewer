@@ -4,7 +4,9 @@ import {
   selectMarkdown,
   update,
 } from './previewerSlice';
-import styles from './previewer.scss';
+import './previewer.scss';
+import marked from 'marked';
+import DOMPurify from 'dompurify';
 
 export function Previewer(){
   const markdown = useSelector(selectMarkdown);
@@ -13,13 +15,12 @@ export function Previewer(){
     return (
       <div id='container'>
         <div id='input'>
-          <textarea 
+          <textarea value={markdown}
             onChange={(e) => dispatch(update(e.target.value))}>
           </textarea>
         </div>
-        <div id='output'>
-          <textarea value = {markdown}></textarea>
-        </div>
+        <div id='output' 
+        dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(marked(markdown))}} />
       </div>
     );
 }
