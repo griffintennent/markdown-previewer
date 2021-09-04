@@ -1,25 +1,43 @@
+$lightbackground: #EDDAD4;
+$darkbackground: #DCB4A8;
+
+body{
+    background-color: $darkbackground;
+}
+
 #container{
     display:flex;
     justify-content: center;
-    background-color: #DCB4A8;
+    flex-wrap: wrap;
 }
 
 #input{
     padding: 2%;
 }
 
-textarea{
-    background-color: #EDDAD4;
+#editor{
+    background-color:$lightbackground;
     border-radius: 7px;
+    border: 2px gray solid;
+    padding-left: 10px;
+    padding-top: 10px;
     width: 35vw;
-    height: 90vh;
+    height: 77vh;
 }
 
-#output{
+#preview{
     margin: 2%;
-    background-color: #EDDAD4;
+    background-color: $lightbackground;
     border-radius: 7px;
-    border: 1px gray solid;
+    border: 2px gray solid;
     width: 35vw;
-    height: 90vh;
+    height: 77vh;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#titleArea{
+    width: 100%;
+    justify-content: center;
+    display: flex;
 }
