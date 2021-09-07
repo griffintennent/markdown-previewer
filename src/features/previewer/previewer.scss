@@ -12,7 +12,8 @@ body{
 }
 
 #input{
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #editor{
@@ -26,14 +27,16 @@ body{
 }
 
 #preview{
-    margin: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: $lightbackground;
     border-radius: 7px;
     border: 2px gray solid;
-    width: 35vw;
+    width: 33vw;
     height: 77vh;
     padding-left: 10px;
     padding-top: 10px;
+    overflow-y:auto;
 }
 
 #titleArea{
